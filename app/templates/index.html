@@ -3,6 +3,7 @@
 <html>
 
 <head>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <style>
 
@@ -71,6 +72,20 @@ article {
 <body>
 
 
+<script>
+$(document).ready(function (){
+$('.emri_').on('change',function(){
+
+  var vlera =$(this).val();
+
+if (vlera.length <6 ){
+  alert('Keni gabuar.')
+  $(this).focus();
+}
+});
+
+});
+</script>
 
 <div class="container">
 
@@ -83,14 +98,14 @@ article {
  </header>
 
 
-
+<form>
 <article>
 
   <pre>           <b>FORMULAR I NJOFTIMIT
 
                   per
 
-Hyrje ne aktivitetin e Komunikimeve Elektronike</b> </pre>			  
+Hyrje ne aktivitetin e Komunikimeve Elektronike</b> </pre>
 
  <p>I. QELLIMI I NJOFTIMIT </p>
 
@@ -100,17 +115,17 @@ Hyrje ne aktivitetin e Komunikimeve Elektronike</b> </pre>
 
 <td>
 
-<input type="checkbox">Fillimi i sherbimit</input>
+<input type="checkbox">Fillimi i sherbimit</input> //check
 
-<input type="checkbox">Shtim sherbimi </input>
+<input type="checkbox">Shtim sherbimi </input> //check
 
-<input type="checkbox">Heqje sherbimi </input>
+<input type="checkbox">Heqje sherbimi </input>  //check
 
 </tr>
 
 </table>
 
-<p> 
+<p>
 
 <br><br>
 
@@ -124,7 +139,7 @@ Hyrje ne aktivitetin e Komunikimeve Elektronike</b> </pre>
 
 <td>Emri i Ndermarresit(Entiteti)</td>
 
-<td><input type="text" size="30"></input></td>
+<td><input type="text" size="30" name="emri_"></input></td>
 
 </tr>
 
@@ -164,7 +179,7 @@ Hyrje ne aktivitetin e Komunikimeve Elektronike</b> </pre>
 
 <td>Numri i Telefonit</td>
 
-<td><input type="text" size="30"></input></td> 
+<td><input type="text" size="30"></input></td> //Tel
 
 </tr>
 
@@ -191,8 +206,8 @@ Hyrje ne aktivitetin e Komunikimeve Elektronike</b> </pre>
 </table>
 
 </article>
-
-
+<input type="submit" value="submit">
+</form>
 
 <footer>Operatret te Licencuar sipas Ligjit per Telekomunikacion Nr.2002/7 nuk jane te obliguar qe te plotsojn piken I,V dhe VI te Fromularit te Njoftimit
 
